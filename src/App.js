@@ -29,8 +29,9 @@ function getRandomIntButNot(min, max, id){
 }
 
 function App() {
+  console.log(process.env.REACT_APP_OPENAI_API_KEY)
   const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 
