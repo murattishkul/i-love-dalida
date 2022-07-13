@@ -30,7 +30,7 @@ function getRandomIntButNot(min, max, id){
 
 function App() {
   const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: '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',
   });
   const openai = new OpenAIApi(configuration);
 
