@@ -29,7 +29,6 @@ function getRandomIntButNot(min, max, id){
 }
 
 function App() {
-  console.log(process.env.REACT_APP_OPENAI_API_KEY)
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
@@ -191,9 +190,24 @@ function App() {
         </div>
         }
       </header>
+      <Footer>
+        {`  Made with <3 by Moora and Norton`}
+      </Footer>
     </div>
   );
 }
+
+const Footer = styled.footer`
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  font-family: 'Edu QLD Beginner', cursive;
+  text-align: center;
+  z-index: 2;
+  padding-left: 15px;
+  font-weight: bold;
+`;
 
 const DalidaCompliment = styled(Typography)`
   font-size: 40px;
